@@ -69,5 +69,10 @@ echo Temporary files have been cleaned. Press any key to exit.
 REM Run popup.vbs to show the message
 wscript.exe "%SCRIPT_DIR%popup.vbs"
 
+REM Run optimisation.ps1 PowerShell script
+echo Running optimisation.ps1...
+echo Running optimisation.ps1... >> "%LOG_DIR%\logs.txt"
+powershell.exe -ExecutionPolicy Bypass -File "%SCRIPT_DIR%optimisation.ps1"
+
 REM Close Command Prompt window
 exit
